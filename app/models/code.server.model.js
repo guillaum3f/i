@@ -16,6 +16,12 @@ var CodeSchema = new Schema({
 		required: 'Please fill Code name',
 		trim: true
 	},
+	snippet: {
+		type: String,
+		default: '',
+		required: 'Please fill Code snippet',
+		trim: true
+	},
 	created: {
 		type: Date,
 		default: Date.now

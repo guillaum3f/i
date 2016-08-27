@@ -2,6 +2,9 @@
 	<div class="page-header">
 		<h1 data-ng-bind="code.name"></h1>
 	</div>
+	<div class="page-body well">
+        <div hljs source="code.snippet"></div>
+    </div>
 	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == code.user._id))">
 		<a class="btn btn-primary" href="/#!/codes/{{code._id}}/edit">
 			<i class="glyphicon glyphicon-edit"></i>

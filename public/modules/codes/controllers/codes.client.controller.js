@@ -9,7 +9,8 @@ angular.module('codes').controller('CodesController', ['$scope', '$stateParams',
 		$scope.create = function() {
 			// Create new Code object
 			var code = new Codes ({
-				name: this.name
+				name: this.name,
+				snippet: this.snippet
 			});
 
 			// Redirect after save
@@ -18,6 +19,7 @@ angular.module('codes').controller('CodesController', ['$scope', '$stateParams',
 
 				// Clear form fields
 				$scope.name = '';
+				$scope.snippet = '';
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});
